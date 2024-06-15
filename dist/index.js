@@ -148,7 +148,7 @@ function buildJDK(javaToBuild, impl, dcevm_branch, dcevm_tag, usePRRef) {
         process.chdir(`${buildDir}`);
         //build
         // workround of issue https://github.com/sophia-guo/build-jdk/issues/6
-        core.exportVariable('ARCHITECTURE', 'x64');
+        core.exportVariable('ARCHITECTURE', 'ARM64');
         let configureArgs;
         const fileName = `Open${javaToBuild}-${impl}-${targetOs}-x64`;
         let fullFileName = `${fileName}.tar.gz`;
